@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Skirmish" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="Skirmish" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scroll" translatesAutoresizingMaskIntoConstraints="NO" id="nnG-QB-cP1">
+                                <rect key="frame" x="615" y="59.666666666666657" width="189" height="255.99999999999997"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="Slc-BR-wLL"/>
+                                    <constraint firstAttribute="height" constant="256" id="k85-IN-US9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-9c-x59">
+                                <rect key="frame" x="60" y="8" width="537" height="157"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HLm-R4-tHP" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24" width="101" height="133"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NNe-fG-A9E" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="16.666666666666671" y="0.0" width="68" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="Lbp-5j-9Ks"/>
+                                                    <constraint firstAttribute="width" constant="68" id="NxH-JW-bJ4"/>
+                                                </constraints>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JK6-xH-5IA">
+                                                <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JK6-xH-5IA" secondAttribute="height" multiplier="101:120" id="0Ew-q1-JIb"/>
+                                                    <constraint firstAttribute="height" constant="120" id="mVP-mN-M6g"/>
+                                                </constraints>
+                                                <state key="normal" image="Witch-Opponent"/>
+                                                <connections>
+                                                    <action selector="selectCharacter:" destination="HLm-R4-tHP" eventType="touchUpInside" id="ze1-Lc-HHG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="characterButton" destination="JK6-xH-5IA" id="vum-lL-2st"/>
+                                            <outlet property="healthView" destination="NNe-fG-A9E" id="VM1-Qy-lth"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E56-Ab-VNy">
+                                        <rect key="frame" x="109" y="0.0" width="101" height="157"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sbs-Xa-aUg" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="133"/>
+                                                <subviews>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gtg-iv-edW" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                        <rect key="frame" x="16.666666666666657" y="0.0" width="68" height="5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="5" id="Aes-uT-hu6"/>
+                                                            <constraint firstAttribute="width" constant="68" id="qdU-ac-Ley"/>
+                                                        </constraints>
+                                                    </progressView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skX-jC-7G1">
+                                                        <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="skX-jC-7G1" secondAttribute="height" multiplier="101:120" id="YSo-dh-S51"/>
+                                                            <constraint firstAttribute="height" constant="120" id="r4h-OM-EGr"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Cleric-Opponent"/>
+                                                        <connections>
+                                                            <action selector="selectCharacter:" destination="Sbs-Xa-aUg" eventType="touchUpInside" id="C1x-s8-45u"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <connections>
+                                                    <outlet property="characterButton" destination="skX-jC-7G1" id="UNU-WQ-59Z"/>
+                                                    <outlet property="healthView" destination="gtg-iv-edW" id="iwt-uB-fur"/>
+                                                </connections>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUj-d1-J6q">
+                                                <rect key="frame" x="0.0" y="133" width="101" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kUj-d1-J6q" firstAttribute="width" secondItem="skX-jC-7G1" secondAttribute="width" id="pAk-ga-sAs"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3IH-JL-DDp" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                        <rect key="frame" x="218" y="24" width="101" height="133"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MbY-69-yWp" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="16.666666666666686" y="0.0" width="68" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="prw-II-TEb"/>
+                                                    <constraint firstAttribute="width" constant="68" id="sv3-GV-xb0"/>
+                                                </constraints>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-xj-rqc">
+                                                <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Mbg-xj-rqc" secondAttribute="height" multiplier="101:120" id="2hB-7S-kS2"/>
+                                                    <constraint firstAttribute="height" constant="120" id="c4a-hL-xRL"/>
+                                                </constraints>
+                                                <state key="normal" image="Warrior-Opponent"/>
+                                                <connections>
+                                                    <action selector="selectCharacter:" destination="3IH-JL-DDp" eventType="touchUpInside" id="ESt-6p-WDL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="characterButton" destination="Mbg-xj-rqc" id="fEc-zS-4xi"/>
+                                            <outlet property="healthView" destination="MbY-69-yWp" id="zhr-sS-HBS"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IAj-8W-w5f">
+                                        <rect key="frame" x="327" y="0.0" width="101" height="157"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wjx-ZR-vcf" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="133"/>
+                                                <subviews>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UVW-Ze-Q76" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                        <rect key="frame" x="16.666666666666686" y="0.0" width="68" height="5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="68" id="UC0-4q-0Xj"/>
+                                                            <constraint firstAttribute="height" constant="5" id="c6g-Zh-Box"/>
+                                                        </constraints>
+                                                    </progressView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTj-Fv-70W">
+                                                        <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="lTj-Fv-70W" secondAttribute="height" multiplier="101:120" id="BMa-27-YUC"/>
+                                                            <constraint firstAttribute="height" constant="120" id="XUQ-Rw-Ba5"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Cleric-Opponent"/>
+                                                        <connections>
+                                                            <action selector="selectCharacter:" destination="Wjx-ZR-vcf" eventType="touchUpInside" id="ng7-sc-cyC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <connections>
+                                                    <outlet property="characterButton" destination="lTj-Fv-70W" id="IW4-MD-kzg"/>
+                                                    <outlet property="healthView" destination="UVW-Ze-Q76" id="MSZ-XL-uQi"/>
+                                                </connections>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YkS-uj-2ca">
+                                                <rect key="frame" x="0.0" y="133" width="101" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YkS-uj-2ca" firstAttribute="width" secondItem="lTj-Fv-70W" secondAttribute="width" id="2T1-U3-Ezg"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eej-yI-0yx" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                        <rect key="frame" x="436" y="24" width="101" height="133"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-0k-RnA" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="16.666666666666629" y="0.0" width="68" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="fJv-0l-xbt"/>
+                                                    <constraint firstAttribute="width" constant="68" id="hBs-HH-Nvv"/>
+                                                </constraints>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRp-Uj-5Cl">
+                                                <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hRp-Uj-5Cl" secondAttribute="height" multiplier="101:120" id="4GT-J8-BGk"/>
+                                                    <constraint firstAttribute="height" constant="120" id="lzv-Av-dqH"/>
+                                                </constraints>
+                                                <state key="normal" image="Witch-Opponent"/>
+                                                <connections>
+                                                    <action selector="selectCharacter:" destination="eej-yI-0yx" eventType="touchUpInside" id="PT3-2r-aoh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="characterButton" destination="hRp-Uj-5Cl" id="7ME-jl-hD2"/>
+                                            <outlet property="healthView" destination="nAm-0k-RnA" id="5c7-3y-mIK"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uun-DP-mz1">
+                                <rect key="frame" x="60" y="189" width="537" height="157"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VMi-AW-jNz" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="133"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gPy-9I-tS0" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="16.666666666666671" y="0.0" width="68" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="cpv-nx-1YO"/>
+                                                    <constraint firstAttribute="width" constant="68" id="sfk-Ru-fNu"/>
+                                                </constraints>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSb-ML-ymL">
+                                                <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="0JE-mv-8YX"/>
+                                                    <constraint firstAttribute="width" secondItem="bSb-ML-ymL" secondAttribute="height" multiplier="101:120" id="q94-s8-IDX"/>
+                                                </constraints>
+                                                <state key="normal" image="Witch"/>
+                                                <connections>
+                                                    <action selector="selectCharacter:" destination="VMi-AW-jNz" eventType="touchUpInside" id="vxN-xI-0pk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="characterButton" destination="bSb-ML-ymL" id="97v-Jt-khu"/>
+                                            <outlet property="healthView" destination="gPy-9I-tS0" id="IZO-6q-4u1"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p0q-Hs-mwr">
+                                        <rect key="frame" x="109" y="0.0" width="101" height="157"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkI-XN-UUt">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="A0N-9j-0Kz"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2gH-mt-XqX" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="24" width="101" height="133"/>
+                                                <subviews>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9iC-ba-ZHl" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                        <rect key="frame" x="16.666666666666657" y="0.0" width="68" height="5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="68" id="2Eu-sH-ORo"/>
+                                                            <constraint firstAttribute="height" constant="5" id="U4Z-sA-2Ay"/>
+                                                        </constraints>
+                                                    </progressView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4i-qq-VMd">
+                                                        <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="W4i-qq-VMd" secondAttribute="height" multiplier="101:120" id="8CP-nj-2AP"/>
+                                                            <constraint firstAttribute="height" constant="120" id="B9U-CA-TzL"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Cleric"/>
+                                                        <connections>
+                                                            <action selector="selectCharacter:" destination="2gH-mt-XqX" eventType="touchUpInside" id="ghe-Q4-HqP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <connections>
+                                                    <outlet property="characterButton" destination="W4i-qq-VMd" id="z24-aw-5H1"/>
+                                                    <outlet property="healthView" destination="9iC-ba-ZHl" id="E5o-vb-aTD"/>
+                                                </connections>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="bkI-XN-UUt" firstAttribute="width" secondItem="W4i-qq-VMd" secondAttribute="width" id="Uzz-1b-IST"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ROY-Cx-wpb" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                        <rect key="frame" x="218" y="0.0" width="101" height="133"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Etq-c1-j8H" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="16.666666666666686" y="0.0" width="68" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="oYU-mk-qbk"/>
+                                                    <constraint firstAttribute="width" constant="68" id="tK2-WE-c1k"/>
+                                                </constraints>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGY-Y0-JZp">
+                                                <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="Z3Y-wb-Bf7"/>
+                                                    <constraint firstAttribute="width" secondItem="kGY-Y0-JZp" secondAttribute="height" multiplier="101:120" id="akl-A9-OQj"/>
+                                                </constraints>
+                                                <state key="normal" image="Warrior"/>
+                                                <connections>
+                                                    <action selector="selectCharacter:" destination="ROY-Cx-wpb" eventType="touchUpInside" id="Wft-xh-f5U"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="characterButton" destination="kGY-Y0-JZp" id="SGU-Jm-rN2"/>
+                                            <outlet property="healthView" destination="Etq-c1-j8H" id="pp8-KM-U8c"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k8S-d9-43w">
+                                        <rect key="frame" x="327" y="0.0" width="101" height="157"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Bi-IU-wIY">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NqI-SN-PzV" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="24" width="101" height="133"/>
+                                                <subviews>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pv8-cC-Uaa" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                        <rect key="frame" x="16.666666666666686" y="0.0" width="68" height="5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="68" id="eGs-WU-IKW"/>
+                                                            <constraint firstAttribute="height" constant="5" id="z4n-30-2OB"/>
+                                                        </constraints>
+                                                    </progressView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn9-AS-IU7">
+                                                        <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="Qk4-CE-Dmm"/>
+                                                            <constraint firstAttribute="width" secondItem="Nn9-AS-IU7" secondAttribute="height" multiplier="101:120" id="oAh-bh-fHm"/>
+                                                        </constraints>
+                                                        <state key="normal" image="Cleric"/>
+                                                        <connections>
+                                                            <action selector="selectCharacter:" destination="NqI-SN-PzV" eventType="touchUpInside" id="C1J-bk-aNo"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <connections>
+                                                    <outlet property="characterButton" destination="Nn9-AS-IU7" id="Q50-S4-lNr"/>
+                                                    <outlet property="healthView" destination="Pv8-cC-Uaa" id="pHC-dW-2d7"/>
+                                                </connections>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6Bi-IU-wIY" firstAttribute="width" secondItem="Nn9-AS-IU7" secondAttribute="width" id="fhb-t7-qkV"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LjJ-o5-h04" customClass="CharacterView" customModule="Skirmish" customModuleProvider="target">
+                                        <rect key="frame" x="436" y="0.0" width="101" height="133"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rjt-N4-i9k" customClass="HealthView" customModule="Skirmish" customModuleProvider="target">
+                                                <rect key="frame" x="16.666666666666629" y="0.0" width="68" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="2Zx-tM-H5i"/>
+                                                    <constraint firstAttribute="height" constant="5" id="gjK-z6-OPS"/>
+                                                </constraints>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h96-iR-caS">
+                                                <rect key="frame" x="0.0" y="13" width="101" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="hAP-br-Brz"/>
+                                                    <constraint firstAttribute="width" secondItem="h96-iR-caS" secondAttribute="height" multiplier="101:120" id="xiJ-V3-b6k"/>
+                                                </constraints>
+                                                <state key="normal" image="Witch"/>
+                                                <connections>
+                                                    <action selector="selectCharacter:" destination="LjJ-o5-h04" eventType="touchUpInside" id="Qns-Zi-XxK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="characterButton" destination="h96-iR-caS" id="wta-E4-Shc"/>
+                                            <outlet property="healthView" destination="rjt-N4-i9k" id="faa-PN-sgu"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Bi-IU-wIY" firstAttribute="height" secondItem="bkI-XN-UUt" secondAttribute="height" id="UOD-jv-pe4"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YS-fA-rbN">
+                                <rect key="frame" x="653" y="126.66666666666669" width="120" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="8f7-JN-3dg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="21"/>
+                                <state key="normal" title="Action">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cej-M6-MHt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cj-xo-dE3">
+                                <rect key="frame" x="644" y="184.66666666666666" width="120" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="g7l-NS-h02"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="21"/>
+                                <state key="normal" title="Action">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCD-Qt-nPo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jnh-9c-x59" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="7hC-Yb-dI3"/>
+                            <constraint firstItem="nnG-QB-cP1" firstAttribute="centerX" secondItem="2cj-xo-dE3" secondAttribute="centerX" constant="5.5" id="FL0-SN-TmD"/>
+                            <constraint firstAttribute="trailing" secondItem="nnG-QB-cP1" secondAttribute="trailing" constant="8" id="IfE-Ue-eSu"/>
+                            <constraint firstItem="kUj-d1-J6q" firstAttribute="height" secondItem="bkI-XN-UUt" secondAttribute="height" id="Kqz-Oz-ZGr"/>
+                            <constraint firstItem="5YS-fA-rbN" firstAttribute="centerX" secondItem="nnG-QB-cP1" secondAttribute="centerX" constant="3.5" id="QhK-U0-ZvR"/>
+                            <constraint firstItem="nnG-QB-cP1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R0n-WG-g9A"/>
+                            <constraint firstItem="Uun-DP-mz1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="b1R-5k-uFS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uun-DP-mz1" secondAttribute="bottom" constant="8" id="fCQ-Wh-hLe"/>
+                            <constraint firstItem="2cj-xo-dE3" firstAttribute="centerY" secondItem="nnG-QB-cP1" secondAttribute="centerY" constant="15.000000000000028" id="fYw-Ev-qkG"/>
+                            <constraint firstItem="nnG-QB-cP1" firstAttribute="centerY" secondItem="5YS-fA-rbN" secondAttribute="centerY" constant="43" id="fsh-0k-DBW"/>
+                            <constraint firstItem="Jnh-9c-x59" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jKF-or-WDl"/>
+                            <constraint firstItem="YkS-uj-2ca" firstAttribute="height" secondItem="bkI-XN-UUt" secondAttribute="height" id="oDo-sS-Wqi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.76078431372549016" green="0.94117647058823528" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.47450980392156861" green="0.66274509803921566" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outletCollection property="playerViews" destination="VMi-AW-jNz" collectionClass="NSMutableArray" id="hL6-8r-s3N"/>
+                        <outletCollection property="playerViews" destination="2gH-mt-XqX" collectionClass="NSMutableArray" id="ccZ-Da-ncQ"/>
+                        <outletCollection property="playerViews" destination="ROY-Cx-wpb" collectionClass="NSMutableArray" id="I79-VR-yAh"/>
+                        <outletCollection property="playerViews" destination="NqI-SN-PzV" collectionClass="NSMutableArray" id="g6C-eV-nzc"/>
+                        <outletCollection property="playerViews" destination="LjJ-o5-h04" collectionClass="NSMutableArray" id="jvK-cL-G1f"/>
+                        <outletCollection property="opponentViews" destination="HLm-R4-tHP" collectionClass="NSMutableArray" id="sl8-UC-PCA"/>
+                        <outletCollection property="opponentViews" destination="Sbs-Xa-aUg" collectionClass="NSMutableArray" id="DmM-uN-ukb"/>
+                        <outletCollection property="opponentViews" destination="3IH-JL-DDp" collectionClass="NSMutableArray" id="Efq-3s-HBV"/>
+                        <outletCollection property="opponentViews" destination="Wjx-ZR-vcf" collectionClass="NSMutableArray" id="aXm-6R-ha8"/>
+                        <outletCollection property="opponentViews" destination="eej-yI-0yx" collectionClass="NSMutableArray" id="Hgo-as-Lq7"/>
+                        <outletCollection property="actionButtons" destination="5YS-fA-rbN" collectionClass="NSMutableArray" id="8by-Yu-yku"/>
+                        <outletCollection property="actionButtons" destination="2cj-xo-dE3" collectionClass="NSMutableArray" id="KFE-1G-4CI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cleric" width="315" height="357"/>
+        <image name="Cleric-Opponent" width="318" height="360"/>
+        <image name="Scroll" width="567" height="768"/>
+        <image name="Warrior" width="303" height="360"/>
+        <image name="Warrior-Opponent" width="306" height="360"/>
+        <image name="Witch" width="279" height="360"/>
+        <image name="Witch-Opponent" width="279" height="360"/>
+    </resources>
+</document>
